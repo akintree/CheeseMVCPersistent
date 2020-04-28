@@ -38,13 +38,15 @@ namespace CheeseMVC.Controllers
             {
                 CheeseCategory newCategory = new CheeseCategory
                 {
-                    Name = addCategoryViewModel.Name
+                    Name = addCategoryViewModel.Name,
+                    ID = addCategoryViewModel.ID
                 };
                 context.Categories.Add(newCategory);
                 context.SaveChanges();
 
                 return Redirect("/Category");
             }
+
             return View(addCategoryViewModel);
         }
     }
