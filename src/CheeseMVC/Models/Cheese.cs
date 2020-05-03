@@ -1,4 +1,6 @@
-﻿namespace CheeseMVC.Models
+﻿using System.Collections.Generic;
+
+namespace CheeseMVC.Models
 {
     public class Cheese
     {
@@ -8,6 +10,6 @@
         public CheeseCategory Category { get; set; }
         public int ID { get; set; }
 
-
+        public IList<CheeseMenu> CheeseMenus { get; set; }
     }
 }
